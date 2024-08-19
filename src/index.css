@@ -1,13 +1,202 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+  
+}
+
+.usersWrapper{
+  width:  75%;
+  height: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.userTableContainer{
+  width: 60%;
+  height: fit-content;
+  background-color: #27293D;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.userTableContainer th, tr td {
+  color: #BFBFC1;
+  text-decoration: none;
+}
+
+.userTableContainer th{
+  padding:0.3rem 0;
+}
+
+.userTableContainer tbody tr:hover > td {
+   color:#27293D;
+}
+
+.userTableContainer thead, tbody tr{
+  border-bottom: 1px solid #BFBFC1;
+  padding: 0,5rem;
+}
+
+.userTableContainer thead th{
+  text-align: left;
+}
+
+.userTableContainer tbody tr:hover{
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+.userProfileWrapper{
+ width: 75%;
+ height: 100%;
+ display: flex;
+ 
+justify-content: center;
+}
+
+.ProfileWrapper{
+  border-radius: 1rem;
+  height: fit-content;
+  width: 30rem;
+  padding: 1rem;
+  background-color: #DC4FD0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 10rem;
+  
+}
+
+
+
+.userName, .userEmail, .userPhone, .userRole{
+  display: inline-block;
+  font-size: medium;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: aliceblue;
+   padding: 0;
+   margin: 0;
+
+}
+
+.userName span{
+  display: inline-block;
+  margin-left: 0.1rem;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+}
+
+.imageWrapper{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 100%;
+  padding: 1rem;
+  background-color: aliceblue;
+
+}
+.ProfileWrapper .imageWrapper img{
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 100%;
+   overflow: hidden;
+}
+
+.sideBarWrapper{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  height: 100%;
+  background-color: #DC4FD0;
+  margin: 0;
+  padding: 1rem;
+}
+
+.UserTable{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s linear;
+  border:1px solid transparent ;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+   
+}
+
+.UserTable svg{
+  width: 1.5rem;
+  height: 1.5rem;
+  color:aliceblue;
+  fill: currentColor;
+}
+
+.UserTable span{
+  color: #f0f8ff;
+  font-size: large;
+  font-weight: 600;
+}
+
+.UserTable:hover {
+  border:1px solid #f0f8ff ;
+  cursor: pointer;
+}
+
+.expand{
+  display: flex;
+  justify-content: end;
+  padding: 0.5rem;
+ }
+
+ .expand svg{
+  fill: currentColor;
+  color: #f0f8ff;
+  border-radius: 100%;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.3rem;
+
+ }
+
+ .isExpandIcon{
+  transform: rotate(180deg);
+ }
+
+ .notExpand{
+  visibility: hidden;
+ }
+
+ .expand svg:hover{
+  cursor: pointer;
+  border: 1px solid #f0f8ff;
+ }
+
+
+.loading{
+  margin: auto;
+  font-size: large;
+  font-weight: bold;
+  color: cornsilk;
 }
