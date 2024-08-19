@@ -16,8 +16,6 @@ const UsersProfile = () => {
 
         return () => abortController.abort();
     }, [param.id]);
-
-    console.log('userDatail', userDetail);
     
     
   return (

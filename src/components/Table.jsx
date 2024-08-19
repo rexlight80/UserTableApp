@@ -16,8 +16,6 @@ const Table = () => {
     return () => abortController.abort()
   }, []);
 
-  console.log('users', users);
-
   const onHandleClick = (e, id) => {
        e.preventDefault();
        navigate(`/${id}`)
